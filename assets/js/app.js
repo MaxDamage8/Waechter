@@ -1,4 +1,4 @@
-// app.js – Burger-Menü, schließt bei Linkklick & Escape, verhindert Scrollen
+// app.js — burger menu
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.header');
   if (!header) return;
@@ -19,11 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.toggle('no-scroll', isOpen);
   });
 
-  menu.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', closeMenu);
-  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
 
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeMenu();
-  });
+  console.log('app.js loaded'); // zum Testen in der Konsole
 });
