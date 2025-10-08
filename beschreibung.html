@@ -10,28 +10,28 @@
 </head>
 <body>
   <header class="header">
-  <div class="container nav">
-    <div class="brand">Oberwallstraße 14</div>
+    <div class="container nav">
+      <div class="brand">Oberwallstraße 14</div>
 
-    <!-- rechts: Sprache + Burger -->
-    <div style="display:flex; gap:.5rem; align-items:center;">
-      <a class="lang-switch-top" href="index-en.html" aria-label="Switch to English">EN</a>
-      <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Menü öffnen/schließen">
-        <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
-        </svg>
-      </button>
+      <!-- rechts: Sprache + Burger -->
+      <div style="display:flex; gap:.5rem; align-items:center;">
+        <a class="lang-switch-top" href="index-en.html" aria-label="Switch to English">EN</a>
+        <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Menü öffnen/schließen">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav id="primary-menu" class="menu" aria-label="Hauptnavigation">
+        <a href="index.html">Home</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="beschreibung.html" aria-current="page">Beschreibung</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
     </div>
-
-    <nav id="primary-menu" class="menu" aria-label="Hauptnavigation">
-      <a href="index.html">Home</a>
-      <a href="galerie.html">Galerie</a>
-      <a href="beschreibung.html">Beschreibung</a>
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
   <main class="section">
     <div class="container prose">
@@ -55,6 +55,17 @@
 
       <p>Ein ebenfalls mit Eichenholz vertäfelter Fahrstuhl mit Messingverkleidung verbindet die Hauptwohnetagen und das Hochparterre mit der Tiefgarage, in der vier unabhängig voneinander über Drehscheibe nutzbare Stellplätze und ein Stellplatz auf der Drehscheibe verfügbar sind. Zwei Abstellräume, Haustechnik- und Müllraum sind ebenfalls von hier aus erreichbar.</p>
 
+      <!-- Video: Vorführung Tiefgarage -->
+      <h3>Video: Vorführung Tiefgarage</h3>
+      <figure>
+        <video controls playsinline preload="metadata" poster="assets/video/garage-poster.jpg" style="width:100%;max-width:900px;border-radius:12px;background:#000;">
+          <source src="assets/video/garage.webm" type="video/webm">
+          Ihr Browser unterstützt das Video-Element nicht.
+          <a href="assets/video/garage.webm">Video herunterladen</a>.
+        </video>
+        <figcaption class="muted" style="margin-top:.5rem;">Demonstration der Zufahrt und Drehscheibe in der Tiefgarage.</figcaption>
+      </figure>
+
       <h3>Weitere Informationen</h3>
       <p><strong>Daten zum Gebäude</strong></p>
       <ul>
@@ -73,7 +84,7 @@
       </ul>
 
       <h3>Architekt</h3>
-      <p>Prof. Hans Kollhoff war einer der Hauptarchitekten der Berliner Wiedervereinigung, u. a. mit zwei Hochhäusern am Potsdamer Platz und dem Ensemble „Walter Benjamin-Platz“ in Charlottenburg. Er steht für außergewöhnlichen architektonischen Anspruch – siehe <a href="https://www.kollhoff.de" target="_blank">www.kollhoff.de</a>.</p>
+      <p>Prof. Hans Kollhoff war einer der Hauptarchitekten der Berliner Wiedervereinigung, u. a. mit zwei Hochhäusern am Potsdamer Platz und dem Ensemble „Walter Benjamin-Platz“ in Charlottenburg. Er steht für außergewöhnlichen architektonischen Anspruch – siehe <a href="https://www.kollhoff.de" target="_blank" rel="noopener">www.kollhoff.de</a>.</p>
 
       <h3>Lage</h3>
       <p>Das Haus wurde auf dem Baugrund der ehemaligen Reichsbank errichtet. Die Oberwallstraße ist eine ruhige Seitenstraße der weltberühmten Straße „Unter den Linden“, verkehrsberuhigt, Einbahnstraße und Fahrradstraße (für Anlieger mit PKW befahrbar). Der Hausvogteiplatz (50 m) war das Zentrum der Modeindustrie in der Weimarer Republik. Der Gendarmenmarkt, das Schauspielhaus, die Staatsoper, die Komische Oper, der Pierre Boulez Saal, die Friedrichstraße und zahlreiche renommierte Restaurants sind in weniger als fünf Minuten erreichbar. In der Umgebung befinden sich Ministerien, Botschaften und internationale Hotels. Das Viertel ist werktags lebendig durch Professionals, Beamte, Diplomaten und Studierende – am Wochenende ruhig und sicher.</p>

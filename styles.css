@@ -251,3 +251,11 @@ body.no-scroll{ height: 100dvh; overflow: hidden; }
   .menu{ gap: 14px; font-size: .88rem; }
   .card{ grid-column: span 12; }
 }
+
+.lightbox video{
+  display:block;
+  max-width:95vw;
+  max-height:85vh;
+  border-radius:12px;
+  background:#000;
+}
