@@ -210,3 +210,71 @@ body.no-scroll{ height: 100dvh; overflow: hidden; }
 .hero-scroll{ position: relative; }
 .hero-scroll::after{ z-index: 0; pointer-events: none; }
 .hero-scroll .hero-img{ display:block; width:100%; height:auto; }
+
+/* === FIX: Header immer sichtbar + Dropdown andocken + Language neben Burger === */
+:root{ --header-height: 64px; }
+
+/* Header fixieren */
+.header{
+  position: fixed !important;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,.80);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Seite unter dem Header beginnen lassen */
+body{ padding-top: var(--header-height) !important; }
+
+/* Sprachlink neben Burger immer sichtbar */
+.lang-switch-top{
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .45rem .6rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  font-size: .85rem;
+}
+
+/* Burger-Button Grundstil (falls nicht vorhanden) */
+.menu-toggle{
+  display: none;
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: .45rem .55rem;
+  border-radius: 10px;
+  line-height: 0;
+  cursor: pointer;
+}
+
+/* Mobile: Menü als Dropdown unter der Leiste */
+@media (max-width: 820px){
+  .nav{ gap: 10px; }
+  .menu-toggle{ display:inline-flex; align-items:center; }
+  .menu{
+    position: fixed !important;
+    left: 0; right: 0;
+    top: var(--header-height) !important;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    padding: .25rem 1rem 1rem;
+    box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  }
+  .header.open .menu{ display:flex; }
+  .menu a{ padding: .9rem 0; border:none !important; text-transform:none; }
+  .brand{ font-size: 1rem; }
+}
+
+/* Kein seitliches Scrollen */
+html, body { overflow-x: hidden !important; }
+
+/* Optional: Seite nicht scrollen, wenn Menü offen */
+body.no-scroll{ height: 100dvh; overflow: hidden; }
