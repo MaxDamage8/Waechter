@@ -278,3 +278,22 @@ html, body { overflow-x: hidden !important; }
 
 /* Optional: Seite nicht scrollen, wenn Menü offen */
 body.no-scroll{ height: 100dvh; overflow: hidden; }
+
+/* CSS-only Dropdown: Menü zeigen, wenn Checkbox aktiv ist */
+@media (max-width: 820px){
+  /* Standard: Menü zu (du hast das bereits so) */
+  .menu{ display: none; }
+
+  /* Wenn der Toggle gecheckt ist, Menü auf */
+  .nav .nav-open:checked ~ .menu{
+    display: flex !important;
+  }
+
+  /* Optional: Body-Scroll sperren, solange offen (ohne :has-Fallback) */
+  .nav .nav-open:checked ~ .menu::after{ content:""; } /* Platzhalter, keine Wirkung */
+}
+
+/* Falls du sicherstellen willst, dass der Header immer oben bleibt (hast du schon) */
+.header{ position: fixed !important; top:0; left:0; right:0; z-index:1000; }
+body{ padding-top: var(--header-height) !important; }
+

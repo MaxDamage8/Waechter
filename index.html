@@ -62,14 +62,19 @@
   <div class="container nav">
     <div class="brand">Oberwallstraße 14</div>
 
-    <!-- rechts: Sprache + Burger -->
+    <!-- Rechts: Sprache + Burger (Checkbox-Hack, kein JS nötig) -->
     <div style="display:flex; gap:.5rem; align-items:center;">
       <a class="lang-switch-top" href="index-en.html" aria-label="Switch to English">EN</a>
-      <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Menü öffnen/schließen">
+
+      <!-- Toggle (unsichtbar) -->
+      <input id="nav-open" class="nav-open" type="checkbox" hidden>
+
+      <!-- Burger-Label schaltet das Checkbox-Input -->
+      <label for="nav-open" class="menu-toggle" aria-label="Menü öffnen/schließen" aria-controls="primary-menu">
         <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
         </svg>
-      </button>
+      </label>
     </div>
 
     <nav id="primary-menu" class="menu" aria-label="Hauptnavigation">
@@ -78,7 +83,6 @@
       <a href="beschreibung.html">Beschreibung</a>
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
-      <!-- KEIN Sprachlink mehr im Menü -->
     </nav>
   </div>
 </header>
