@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impressum – Oberwallstraße 14</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">Oberwallstraße 14</div>
+      <nav class="menu">
+        <a href="index.html">Home</a>
+        <a href="galerie.html">Galerie</a>
+        <a href="beschreibung.html">Beschreibung</a>
+        <a href="impressum.html" aria-current="page">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="legal.html" class="lang-switch">EN</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container prose">
+      <h2>Impressum</h2>
+      <p>Prof. Dr. Gerhard H. Wächter<br>Oberwallstraße 14<br>10117 Berlin<br>Deutschland</p>
+      <p>E-Mail: waechter@waechterlaw.de<br>Telefon: +49 030 / 20 29 72 -0</p>
+      <p class="muted">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: Prof. Dr. Gerhard H. Wächter</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="y"></span> Oberwallstraße 14</div>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

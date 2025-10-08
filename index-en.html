@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home – Oberwallstraße 14</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Page-specific overrides (only for this EN homepage) -->
+  <style>
+    /* Real image hero so you can scroll the full photo */
+    .hero-scroll{
+      position: relative;
+      background: none;
+      min-height: unset;
+      display: block;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+    }
+    .hero-scroll .hero-img{
+      display: block;
+      width: 100%;
+      height: auto; /* full width, proportional height => fully scrollable */
+    }
+    /* Soft gradient at the top for text readability */
+    .hero-scroll::after{
+      content: "";
+      position: absolute; inset: 0 0 auto 0;
+      height: 40vh;
+      background: linear-gradient(180deg, rgba(0,0,0,.48), rgba(0,0,0,0));
+      pointer-events: none;
+    }
+    .hero-scroll .inner{
+      position: absolute;
+      left: 50%; top: 18vh; transform: translateX(-50%);
+      z-index: 1;
+      padding: 0 1rem;
+    }
+    .hero-scroll h1{
+      margin: 0 0 .6rem;
+      font-size: clamp(2rem, 6vw, 4rem);
+      letter-spacing: .06em; text-transform: uppercase;
+      text-shadow: 0 2px 12px rgba(0,0,0,.35);
+    }
+    .hero-scroll p{
+      margin: 0; max-width: 60ch;
+      color: #f1f1f1;
+      text-shadow: 0 1px 8px rgba(0,0,0,.35);
+    }
+    @media (max-width: 640px){
+      .hero-scroll .inner{ top: 14vh; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">Oberwallstraße 14</div>
+      <nav class="menu">
+        <a href="index-en.html" aria-current="page">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="description.html">Description</a>
+        <a href="legal.html">Legal Notice</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="index.html" class="lang-switch">DE</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- New scrollable hero -->
+    <section class="hero hero-scroll" aria-label="Facade of Oberwallstraße 14">
+      <img class="hero-img" src="assets/hero.jpg" alt="Oberwallstraße 14 – facade with bay window and columns">
+      <div class="inner">
+        <h1>Welcome</h1>
+        <p>Oberwallstraße 14 – a unique architectural townhouse by Hans Kollhoff in the heart of Berlin.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="y"></span> Oberwallstraße 14</div>
+  </footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
