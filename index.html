@@ -3,92 +3,42 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Startseite – Oberwallstraße 14</title>
+  <title>Oberwallstraße 14</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="assets/js/app.js?v=12" defer></script>
-
-  <!-- Seiteigene Overrides NUR für die Startseite -->
-  <style>
-    /* Hero „scrollbar“: echtes Bild statt Background, keine Beschneidung */
-    .hero-scroll {
-      position: relative;
-      background: none;          /* Hintergrundbild entfernen */
-      min-height: unset;         /* keine feste Mindesthöhe */
-      display: block;
-      padding: 0;
-      color: #fff;
-      text-align: center;
-    }
-    .hero-scroll .hero-img {
-      display: block;
-      width: 100%;
-      height: auto;              /* volle Breite, proportionale Höhe -> komplett scrollbar */
-    }
-    /* leichte Abdunklung oben für die Headline */
-    .hero-scroll::after{
-      content: "";
-      position: absolute; inset: 0 0 auto 0;
-      height: 40vh;              /* nur oberer Bereich, damit Text gut lesbar ist */
-      background: linear-gradient(180deg, rgba(0,0,0,.48), rgba(0,0,0,0));
-      pointer-events: none;
-    }
-    .hero-scroll .inner{
-      position: absolute;
-      left: 50%; top: 18vh; transform: translateX(-50%);
-      z-index: 1;
-      padding: 0 1rem;
-    }
-    .hero-scroll h1{
-      margin: 0 0 .6rem;
-      font-size: clamp(2rem, 6vw, 4rem);
-      letter-spacing: .06em; text-transform: uppercase;
-      text-shadow: 0 2px 12px rgba(0,0,0,.35);
-    }
-    .hero-scroll p{
-      margin: 0;
-      max-width: 60ch;
-      color: #f1f1f1;
-      text-shadow: 0 1px 8px rgba(0,0,0,.35);
-    }
-
-    /* Kleinere Screens: Headline etwas tiefer setzen */
-    @media (max-width: 640px){
-      .hero-scroll .inner{ top: 14vh; }
-    }
-  </style>
+  <script src="assets/js/app.js?v=13" defer></script>
+  <meta name="description" content="Verkauf der Oberwallstrasse 14, 10117 Berlin · Sale of Oberwallstrasse 14, 10117 Berlin">
 </head>
 <body>
   <header class="header">
-  <div class="container nav">
-    <div class="brand">Oberwallstraße 14</div>
+    <div class="container nav">
+      <div class="brand">Oberwallstraße 14</div>
 
-    <!-- rechts: Sprache + Burger -->
-    <div style="display:flex; gap:.5rem; align-items:center;">
-      <a class="lang-switch-top" href="index-en.html" aria-label="Switch to English">EN</a>
       <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Menü öffnen/schließen">
         <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
         </svg>
       </button>
-    </div>
 
-    <nav id="primary-menu" class="menu" aria-label="Hauptnavigation">
-      <a href="index.html">Home</a>
-      <a href="galerie.html">Galerie</a>
-      <a href="beschreibung.html">Beschreibung</a>
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-    </nav>
-  </div>
-</header>
+      <nav id="primary-menu" class="menu" aria-label="Hauptnavigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="beschreibung.html">Beschreibung</a>
+        <a href="description.html">Description</a>
+        <a href="fotos.html">Fotos/Pictures</a>
+        <a href="impressum.html">Impressum</a>
+      </nav>
+    </div>
+  </header>
 
   <main>
-    <!-- neues, scrollbares Hero -->
-    <section class="hero hero-scroll" aria-label="Fassade Oberwallstraße 14">
-      <img class="hero-img" src="assets/hero.jpg" alt="Oberwallstraße 14 – Fassade mit Erker und Säulen">
-      <div class="inner">
-        <h1>Willkommen</h1>
-        <p>Oberwallstraße 14 – ein architektonisches Unikat von Hans Kollhoff im Herzen Berlins.</p>
+    <section class="hero-scroll">
+      <img class="hero-img" src="assets/hero.jpg" alt="Oberwallstraße 14 – Außenansicht">
+
+      <!-- Weißer Text über dem Bild -->
+      <div class="hero-overlay">
+        <h1 class="hero-title">
+          <span lang="de">Verkauf der Oberwallstrasse 14, 10117 Berlin</span>
+          <span class="hero-sub" lang="en">Sale of Oberwallstrasse 14, 10117 Berlin</span>
+        </h1>
       </div>
     </section>
   </main>
@@ -96,6 +46,6 @@
   <footer class="footer">
     <div class="container">© <span id="y"></span> Oberwallstraße 14</div>
   </footer>
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
