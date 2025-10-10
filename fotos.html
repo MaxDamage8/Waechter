@@ -6,43 +6,7 @@
   <title>Fotos / Pictures – Oberwallstraße 14</title>
   <meta name="description" content="Fotos/Pictures der Oberwallstraße 14, Berlin – geordnet nach Sektionen A–G, mit Beschriftungen in DE/EN.">
   <link rel="stylesheet" href="styles.css" />
-  <script src="assets/js/app.js?v=16" defer></script>
-
-  <style>
-    /* ========= Gleichmäßige Karten-Galerie (keine wilden Höhen) ========= */
-    .section-wrap{ margin: calc(var(--space)*1.5) 0 var(--space); }
-    .section-wrap + .section-wrap{ border-top: 1px solid var(--line); padding-top: calc(var(--space)*1.5); }
-    .section-title{
-      margin: 0 0 .75rem;
-      font-size: clamp(1.2rem, 2.4vw, 1.4rem);
-      letter-spacing:.06em; text-transform: uppercase;
-    }
-
-    .gallery-grid{
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: var(--space);
-    }
-    /* Standard: 3 Karten pro Reihe */
-    .g-card{ grid-column: span 4; }
-
-    /* Karte: einheitlicher Look + Zuschnitt */
-    .g-card figure{ margin: 0; border-radius: 12px; overflow: hidden; background:#f6f6f6; }
-    .g-card a{ display:block; }
-    .g-card .imgwrap{ aspect-ratio: 4/3; }  /* gleichmäßige Höhe pro Karte */
-    .g-card img{ width:100%; height:100%; display:block; object-fit: cover; } /* keine doppelten Rundungen */
-    .g-card figcaption{ font-size:.95rem; margin-top:.6rem; }
-
-    /* Responsive: 2 Spalten (Tablet), 1 Spalte (Phone) */
-    @media (max-width: 1100px){ .g-card{ grid-column: span 6; } }
-    @media (max-width: 640px){
-      .g-card{ grid-column: span 12; }
-      .g-card .imgwrap{ aspect-ratio: 3/2; } /* etwas höher auf Mobil */
-    }
-
-    /* Lightbox: Bildbeschriftung ausblenden (nur unter den Thumbs zeigen) */
-    .lightbox .caption{ display:none; }
-  </style>
+  <script src="assets/js/app.js?v=17" defer></script>
 </head>
 <body>
 <header class="header">
@@ -71,196 +35,94 @@
     <!-- ================= A. HOUSE ================= -->
     <section class="section-wrap" id="A">
       <h2 class="section-title">A. House / Haus</h2>
-      <div class="gallery-grid" role="list">
-        <!-- 1 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img1" aria-label="Bild 1 groß ansehen">
-              <div class="imgwrap"><img loading="lazy" src="assets/gallery/1.jpg" alt="Frontal view from Oberwallstrasse"></div>
-            </a>
-            <figcaption>Frontal view from Oberwallstrasse — Frontansicht von der Oberwallstraße.</figcaption>
-          </figure>
-        </article>
-        <!-- 2 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img2"><div class="imgwrap"><img loading="lazy" src="assets/gallery/2.jpg" alt="Elevator at Mezzanine Floor"></div></a>
-            <figcaption>Elevator at Mezzanine Floor — Aufzug im Mezzanin.</figcaption>
-          </figure>
-        </article>
-        <!-- 3 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img3"><div class="imgwrap"><img loading="lazy" src="assets/gallery/3.jpg" alt="Details Building"></div></a>
-            <figcaption>Details Building — Baudetails.</figcaption>
-          </figure>
-        </article>
-        <!-- 4 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img4"><div class="imgwrap"><img loading="lazy" src="assets/gallery/4.jpg" alt="Hallway / Entrance"></div></a>
-            <figcaption>Hallway / Entrance — Halle / Eingang.</figcaption>
-          </figure>
-        </article>
-        <!-- 5 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img5"><div class="imgwrap"><img loading="lazy" src="assets/gallery/5.jpg" alt="Hallway / Entrance (2)"></div></a>
-            <figcaption>Hallway / Entrance — Halle / Eingang.</figcaption>
-          </figure>
-        </article>
+      <div class="gallery" role="list">
+        <!-- 1 – wichtigstes Hochformat: volle Breite -->
+        <figure class="g-item sz-l" role="listitem">
+          <img loading="lazy" src="assets/gallery/1.jpg" alt="Frontal view from Oberwallstrasse">
+          <figcaption>Frontal view from Oberwallstrasse — Frontansicht von der Oberwallstraße.</figcaption>
+        </figure>
+        <!-- 2–3 groß, nebeneinander -->
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/2.jpg" alt="Elevator at Mezzanine Floor"><figcaption>Elevator at Mezzanine Floor — Aufzug im Mezzanin.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/3.jpg" alt="Details Building"><figcaption>Details Building — Baudetails.</figcaption></figure>
+        <!-- 4–5 groß, nebeneinander -->
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/4.jpg" alt="Hallway / Entrance"><figcaption>Hallway / Entrance — Halle / Eingang.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/5.jpg" alt="Hallway / Entrance (2)"><figcaption>Hallway / Entrance — Halle / Eingang.</figcaption></figure>
       </div>
     </section>
 
     <!-- ============= B. OFFICE (Raised Ground Floor) ============= -->
     <section class="section-wrap" id="B">
       <h2 class="section-title">B. Office (Raised Ground Floor) / Büro (Hochparterre)</h2>
-      <div class="gallery-grid" role="list">
-        <!-- 6 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img6"><div class="imgwrap"><img loading="lazy" src="assets/gallery/6.jpg" alt="Conference Room in office"></div></a>
-            <figcaption>Conference Room in office — Konferenzraum im Büro.</figcaption>
-          </figure>
-        </article>
-        <!-- 7 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img7"><div class="imgwrap"><img loading="lazy" src="assets/gallery/7.jpg" alt="Library in Office"></div></a>
-            <figcaption>Library in Office — Bibliothek im Büro.</figcaption>
-          </figure>
-        </article>
-        <!-- 8 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img8"><div class="imgwrap"><img loading="lazy" src="assets/gallery/8.jpg" alt="View in small garden from office"></div></a>
-            <figcaption>View in small garden from office — Blick in den kleinen Garten vom Büro.</figcaption>
-          </figure>
-        </article>
+      <div class="gallery" role="list">
+        <!-- 6–7 groß, nebeneinander -->
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/6.jpg" alt="Conference Room in office"><figcaption>Conference Room in office — Konferenzraum im Büro.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/7.jpg" alt="Library in Office"><figcaption>Library in Office — Bibliothek im Büro.</figcaption></figure>
+        <!-- 8 groß über die ganze Breite -->
+        <figure class="g-item sz-l"><img loading="lazy" src="assets/gallery/8.jpg" alt="View in small garden from office"><figcaption>View in small garden from office — Blick in den kleinen Garten vom Büro.</figcaption></figure>
       </div>
     </section>
 
     <!-- ================= C. FIRST FLOOR ================= -->
     <section class="section-wrap" id="C">
       <h2 class="section-title">C. First Floor / Erstes Obergeschoss</h2>
-      <div class="gallery-grid" role="list">
-        <!-- 9 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img9"><div class="imgwrap"><img loading="lazy" src="assets/gallery/9.jpg" alt="General View First Floor"></div></a>
-            <figcaption>General View First Floor — 1. OG Gesamtansicht.</figcaption>
-          </figure>
-        </article>
-        <!-- 10 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img10"><div class="imgwrap"><img loading="lazy" src="assets/gallery/10.jpg" alt="Fireplace / Living Room (1st Floor)"></div></a>
-            <figcaption>Fireplace / Living Room — Kamin/Wohnbereich 1. OG.</figcaption>
-          </figure>
-        </article>
-        <!-- 11 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img11"><div class="imgwrap"><img loading="lazy" src="assets/gallery/11.jpg" alt="Marble Bath in First Floor"></div></a>
-            <figcaption>Marble Bath in First Floor — Marmorbad im 1. OG.</figcaption>
-          </figure>
-        </article>
+      <div class="gallery" role="list">
+        <!-- 9 als großer Hero -->
+        <figure class="g-item sz-l"><img loading="lazy" src="assets/gallery/9.jpg"  alt="General View First Floor"><figcaption>General View First Floor — 1. OG Gesamtansicht.</figcaption></figure>
+        <!-- 10–11 groß, nebeneinander -->
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/10.jpg" alt="Fireplace / Living Room (1st Floor)"><figcaption>Fireplace / Living Room — Kamin/Wohnbereich 1. OG.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/11.jpg" alt="Marble Bath in First Floor"><figcaption>Marble Bath in First Floor — Marmorbad im 1. OG.</figcaption></figure>
+        <!-- 12–15 gehören hierher; zwei Reihen groß -->
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/12.jpg" alt="First Floor Details"><figcaption>First Floor Details — Details 1. OG.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/13.jpg" alt="First Floor Details (2)"><figcaption>First Floor Details — Details 1. OG.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/14.jpg" alt="First Floor Details (3)"><figcaption>First Floor Details — Details 1. OG.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/15.jpg" alt="First Floor Details (4)"><figcaption>First Floor Details — Details 1. OG.</figcaption></figure>
       </div>
     </section>
 
     <!-- ================= D. FOURTH FLOOR ================= -->
     <section class="section-wrap" id="D">
       <h2 class="section-title">D. Fourth Floor / Viertes Obergeschoss</h2>
-      <div class="gallery-grid" role="list">
-        <!-- 16 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img16"><div class="imgwrap"><img loading="lazy" src="assets/gallery/16.jpg" alt="Fourth Floor Living Area"></div></a>
-            <figcaption>Fourth Floor Living Area — Wohnbereich 4. OG.</figcaption>
-          </figure>
-        </article>
-        <!-- 17 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img17"><div class="imgwrap"><img loading="lazy" src="assets/gallery/17.jpg" alt="Fourth Floor Living Area"></div></a>
-            <figcaption>Fourth Floor Living Area — Wohnbereich 4. OG.</figcaption>
-          </figure>
-        </article>
-        <!-- 18 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img18"><div class="imgwrap"><img loading="lazy" src="assets/gallery/18.jpg" alt="Fourth Floor Eating Area"></div></a>
-            <figcaption>Fourth Floor Eating Area — Essbereich 4. OG.</figcaption>
-          </figure>
-        </article>
-        <!-- 19 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img19"><div class="imgwrap"><img loading="lazy" src="assets/gallery/19.jpg" alt="Fourth Floor Eating Area (2)"></div></a>
-            <figcaption>Fourth Floor Eating Area — Essbereich 4. OG.</figcaption>
-          </figure>
-        </article>
+      <div class="gallery" role="list">
+        <!-- zwei Reihen groß -->
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/16.jpg" alt="Fourth Floor Living Area"><figcaption>Fourth Floor Living Area — Wohnbereich 4. OG.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/17.jpg" alt="Fourth Floor Living Area"><figcaption>Fourth Floor Living Area — Wohnbereich 4. OG.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/18.jpg" alt="Fourth Floor Eating Area"><figcaption>Fourth Floor Eating Area — Essbereich 4. OG.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/19.jpg" alt="Fourth Floor Eating Area (2)"><figcaption>Fourth Floor Eating Area — Essbereich 4. OG.</figcaption></figure>
       </div>
     </section>
 
     <!-- ======= E. INTERMEDIATE FLOORS (Second & Third) ======= -->
     <section class="section-wrap" id="E">
       <h2 class="section-title">E. Intermediate Floors (Second &amp; Third) / Zwischenetagen (2. &amp; 3. OG)</h2>
-      <div class="gallery-grid" role="list">
-        <!-- 12–15 -->
-        <article class="g-card"><figure><a href="#img12"><div class="imgwrap"><img loading="lazy" src="assets/gallery/12.jpg" alt="Second Floor Details"></div></a><figcaption>Second Floor Details — Details 2. OG.</figcaption></figure></article>
-        <article class="g-card"><figure><a href="#img13"><div class="imgwrap"><img loading="lazy" src="assets/gallery/13.jpg" alt="Second Floor Details (2)"></div></a><figcaption>Second Floor Details — Details 2. OG.</figcaption></figure></article>
-        <article class="g-card"><figure><a href="#img14"><div class="imgwrap"><img loading="lazy" src="assets/gallery/14.jpg" alt="Third Floor Details"></div></a><figcaption>Third Floor Details — Details 3. OG.</figcaption></figure></article>
-        <article class="g-card"><figure><a href="#img15"><div class="imgwrap"><img loading="lazy" src="assets/gallery/15.jpg" alt="Third Floor Details (2)"></div></a><figcaption>Third Floor Details — Details 3. OG.</figcaption></figure></article>
-
-        <!-- 20–26 -->
-        <article class="g-card"><figure><a href="#img20"><div class="imgwrap"><img loading="lazy" src="assets/gallery/20.jpg" alt="Bedroom Third Floor"></div></a><figcaption>Bedroom Third Floor — Schlafzimmer 3. OG.</figcaption></figure></article>
-        <article class="g-card"><figure><a href="#img21"><div class="imgwrap"><img loading="lazy" src="assets/gallery/21.jpg" alt="Library Third Floor"></div></a><figcaption>Library Third Floor — Bibliothek 3. OG.</figcaption></figure></article>
-        <article class="g-card"><figure><a href="#img22"><div class="imgwrap"><img loading="lazy" src="assets/gallery/22.jpg" alt="Marble Bath Third Floor"></div></a><figcaption>Marble Bath Third Floor — Marmorbad 3. OG.</figcaption></figure></article>
-        <article class="g-card"><figure><a href="#img23"><div class="imgwrap"><img loading="lazy" src="assets/gallery/23.jpg" alt="Details Second & Third Floor"></div></a><figcaption>Details Second &amp; Third Floor — Details 2. &amp; 3. OG.</figcaption></figure></article>
-        <article class="g-card"><figure><a href="#img24"><div class="imgwrap"><img loading="lazy" src="assets/gallery/24.jpg" alt="Details Second & Third Floor"></div></a><figcaption>Details Second &amp; Third Floor — Details 2. &amp; 3. OG.</figcaption></figure></article>
-        <article class="g-card"><figure><a href="#img25"><div class="imgwrap"><img loading="lazy" src="assets/gallery/25.jpg" alt="Details Second & Third Floor"></div></a><figcaption>Details Second &amp; Third Floor — Details 2. &amp; 3. OG.</figcaption></figure></article>
-        <article class="g-card"><figure><a href="#img26"><div class="imgwrap"><img loading="lazy" src="assets/gallery/26.jpg" alt="Details Second & Third Floor"></div></a><figcaption>Details Second &amp; Third Floor — Details 2. &amp; 3. OG.</figcaption></figure></article>
+      <div class="gallery" role="list">
+        <!-- alles groß (2 Spalten), damit nichts zu klein wird -->
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/20.jpg" alt="Bedroom Third Floor"><figcaption>Bedroom Third Floor — Schlafzimmer 3. OG.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/21.jpg" alt="Library Third Floor"><figcaption>Library Third Floor — Bibliothek 3. OG.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/22.jpg" alt="Marble Bath Third Floor"><figcaption>Marble Bath Third Floor — Marmorbad 3. OG.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/23.jpg" alt="Details Second &amp; Third Floor"><figcaption>Details Second &amp; Third Floor — Details 2. &amp; 3. OG.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/24.jpg" alt="Details Second &amp; Third Floor"><figcaption>Details Second &amp; Third Floor — Details 2. &amp; 3. OG.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/25.jpg" alt="Details Second &amp; Third Floor"><figcaption>Details Second &amp; Third Floor — Details 2. &amp; 3. OG.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/26.jpg" alt="Details Second &amp; Third Floor"><figcaption>Details Second &amp; Third Floor — Details 2. &amp; 3. OG.</figcaption></figure>
       </div>
     </section>
 
     <!-- ================= F. ROOF TERRACE ================= -->
     <section class="section-wrap" id="F">
       <h2 class="section-title">F. Roof Terrace / Dachterrasse</h2>
-      <div class="gallery-grid" role="list">
-        <!-- 27–28 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img27"><div class="imgwrap"><img loading="lazy" src="assets/gallery/27.jpg" alt="Roof Terrace"></div></a>
-            <figcaption>Roof Terrace — Dachterrasse.</figcaption>
-          </figure>
-        </article>
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img28"><div class="imgwrap"><img loading="lazy" src="assets/gallery/28.jpg" alt="Roof Terrace (2)"></div></a>
-            <figcaption>Roof Terrace — Dachterrasse.</figcaption>
-          </figure>
-        </article>
+      <div class="gallery" role="list">
+        <!-- groß nebeneinander -->
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/27.jpg" alt="Roof Terrace"><figcaption>Roof Terrace — Dachterrasse.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/28.jpg" alt="Roof Terrace (2)"><figcaption>Roof Terrace — Dachterrasse.</figcaption></figure>
       </div>
     </section>
 
     <!-- ================= G. LOCATION ================= -->
     <section class="section-wrap" id="G">
       <h2 class="section-title">G. Location / Lage</h2>
-      <div class="gallery-grid" role="list">
-        <!-- 29–30 -->
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img29"><div class="imgwrap"><img loading="lazy" src="assets/gallery/29.jpg" alt="Location Map / Umgebungskarte"></div></a>
-            <figcaption>Location Map — Umgebungskarte.</figcaption>
-          </figure>
-        </article>
-        <article class="g-card" role="listitem">
-          <figure>
-            <a href="#img30"><div class="imgwrap"><img loading="lazy" src="assets/gallery/30.jpg" alt="View to Hausvogteiplatz and into Oberwallstraße (historic)"></div></a>
-            <figcaption>View to Hausvogteiplatz and into Oberwallstraße (historic) — Historischer Blick.</figcaption>
-          </figure>
-        </article>
+      <div class="gallery" role="list">
+        <!-- groß nebeneinander (wie gewünscht) -->
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/29.jpg" alt="Location Map / Umgebungskarte"><figcaption>Location Map — Umgebungskarte.</figcaption></figure>
+        <figure class="g-item sz-m"><img loading="lazy" src="assets/gallery/30.jpg" alt="View to Hausvogteiplatz and into Oberwallstraße (historic)"><figcaption>View to Hausvogteiplatz and into Oberwallstraße (historic) — Historischer Blick.</figcaption></figure>
       </div>
     </section>
 
@@ -272,7 +134,7 @@
 </footer>
 <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 
-<!-- Lightbox 1–30: nur Bild (keine Caption im Overlay) -->
+<!-- Lightbox 1–30: nur Bild -->
 <div id="img1"  class="lightbox"><a href="#" class="close" aria-label="Schließen">&times;</a><img src="assets/gallery/1.jpg"  alt=""></div>
 <div id="img2"  class="lightbox"><a href="#" class="close" aria-label="Schließen">&times;</a><img src="assets/gallery/2.jpg"  alt=""></div>
 <div id="img3"  class="lightbox"><a href="#" class="close" aria-label="Schließen">&times;</a><img src="assets/gallery/3.jpg"  alt=""></div>
